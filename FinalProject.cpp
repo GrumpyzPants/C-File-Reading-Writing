@@ -1,5 +1,3 @@
-// Your name here(NO NAME, NO POINTS!): Weston Prosser
-
 #include <iostream>
 #include <string>
 #include <vector>
