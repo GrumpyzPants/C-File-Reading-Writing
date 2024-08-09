@@ -84,7 +84,7 @@ int ProcessCommand(string raw) {
 	//if cmd is display - prints value after display
 	else if (cmd == "display") {
 		string message = raw.substr(raw.find(":") + 1);		//Goes to position after ':' and saves all values after as a string message
-		cout << trim(message) << endl;						//Prints message
+		cout << trim(message) << endl;				//Prints message
 	}
 
 	//if cmd is sqrt or square root - takes sqrt of number and prints result
@@ -101,12 +101,12 @@ int ProcessCommand(string raw) {
 
 	//if cmd is add - adds two given numbers
 	else if (cmd == "add") {
-		size_t pos = raw.find(":") + 1;										//Finds position of first ":" + 1 -> stores as pos
-		int num1 = stoi(raw.substr(pos, raw.find(",") - pos));				//Takes pos - finds next pos of "," - stores anything between as num1
-		pos = raw.find(",") + 1;											//Takes pos and sets to ","
-		int num2 = stoi(raw.substr(pos));									//Takes pos and returns anything after the "," that pos is saved to - stores as num
+		size_t pos = raw.find(":") + 1;								//Finds position of first ":" + 1 -> stores as pos
+		int num1 = stoi(raw.substr(pos, raw.find(",") - pos));					//Takes pos - finds next pos of "," - stores anything between as num1
+		pos = raw.find(",") + 1;								//Takes pos and sets to ","
+		int num2 = stoi(raw.substr(pos));							//Takes pos and returns anything after the "," that pos is saved to - stores as num
 
-		cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;	//Does the math
+		cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;			//Does the math
 	} 
 
 	//if cmd is subtract - subtracts two given numbers
@@ -176,12 +176,12 @@ int ProcessCommand(string raw) {
 
 	//if cmd is add3 - takes three numbers and adds them together
 	else if (cmd == "add3" || cmd == "add 3") {
-		size_t pos = raw.find(":") + 1;								//finds position of ":" - sets to variable pos but plus 1 in position
-		int num1 = stoi(raw.substr(pos, raw.find(",") - pos));		//takes pos - then finds position of first found "," - returns values between as substring stored in num1
+		size_t pos = raw.find(":") + 1;									//finds position of ":" - sets to variable pos but plus 1 in position
+		int num1 = stoi(raw.substr(pos, raw.find(",") - pos));						//takes pos - then finds position of first found "," - returns values between as substring stored in num1
 		pos = raw.find(",") + 1;									//sets pos to first found "," + 1
-		int num2 = stoi(raw.substr(pos, raw.find(",") - pos));		//takes pos - then finds next "," - returns value between as substring stored in num2
-		pos = raw.find_last_of(",") + 1;							//Finds last ","
-		int num3 = stoi(raw.substr(pos));							//takes pos and returns and value after stored in num3
+		int num2 = stoi(raw.substr(pos, raw.find(",") - pos));						//takes pos - then finds next "," - returns value between as substring stored in num2
+		pos = raw.find_last_of(",") + 1;								//Finds last ","
+		int num3 = stoi(raw.substr(pos));								//takes pos and returns and value after stored in num3
 
 		cout << num1 << " + " << num2 << " + " << num3 << " = " << (num1 + num2 + num3) << endl;	//does the math
 	}
